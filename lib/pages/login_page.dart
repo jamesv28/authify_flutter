@@ -48,7 +48,7 @@ class LoginPage extends StatelessWidget {
   }
 
   Widget _emailTextField() {
-    return Container(
+    return SizedBox(
       width: _deviceWidth * 0.70,
       child: const TextField(
         cursorColor: Colors.white,

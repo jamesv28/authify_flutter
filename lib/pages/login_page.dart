@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 
-
 class LoginPage extends StatelessWidget {
   LoginPage({super.key});
 
@@ -18,16 +17,26 @@ class LoginPage extends StatelessWidget {
       backgroundColor: primaryColor,
       body: Align(
         alignment: Alignment.center,
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceAround,
-          mainAxisSize: MainAxisSize.max,
-          crossAxisAlignment: CrossAxisAlignment.center,
-          children: [
-            _avatarWidget(),
-            _emailTextField(),
-            _passwordTexField(),
-            _loginButton()
-          ],
+        child: Container(
+          height: _deviceHeight * 0.60,
+          width: _deviceWidth,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.spaceAround,
+            mainAxisSize: MainAxisSize.max,
+            crossAxisAlignment: CrossAxisAlignment.center,
+            children: [
+              _avatarWidget(),
+              SizedBox(
+                height: _deviceHeight * 0.05,
+              ),
+              _emailTextField(),
+              _passwordTexField(),
+              SizedBox(
+                height: _deviceHeight * 0.10,
+              ),
+              _loginButton()
+            ],
+          ),
         ),
       ),
     );
@@ -94,7 +103,7 @@ class LoginPage extends StatelessWidget {
   Widget _loginButton() {
     return MaterialButton(
       minWidth: _deviceWidth * 0.38,
-      height: _deviceHeight * 0.12,
+      height: _deviceWidth * 0.12,
       color: Colors.white,
       shape: RoundedRectangleBorder(
         borderRadius: BorderRadius.circular(25.0),
